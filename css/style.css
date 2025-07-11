@@ -1,0 +1,222 @@
+/*
+  Stile personalizzato per lo shop online
+  - Palette: blu principale, grigio scuro, bianco
+  - Coerenza cromatica tra tutte le pagine
+  - Dark mode supportata
+  - Font moderno
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+body {
+  background-color: #f8f9fa; /* Sfondo chiaro */
+  color: #222;
+  font-family: "Poppins", "Segoe UI", "Roboto", Arial, sans-serif; /* Font moderno */
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #0d6efd 60%, #212529 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.navbar .navbar-brand {
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Stile per il logo nella navbar */
+.navbar-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  padding: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(13, 110, 253, 0.07),
+    0 1.5px 6px rgba(33, 37, 41, 0.04);
+  border: none;
+  /* Rimosso effetto hover animato */
+}
+
+.card:hover {
+  /* Nessuna animazione/trasformazione */
+}
+
+.card-img-top {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  object-fit: cover;
+  height: 220px;
+  background: #e9ecef;
+}
+
+.card-title,
+.card-subtitle {
+  color: #0d6efd;
+}
+
+.btn-primary,
+.btn-primary:focus {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  background-color: #084298;
+  border-color: #084298;
+}
+
+.btn-warning {
+  color: #fff;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #b52a37;
+  border-color: #a71d2a;
+}
+
+.alert-info {
+  background: linear-gradient(90deg, #e3f0ff 60%, #f8f9fa 100%);
+  color: #084298;
+  border: 1px solid #b6d4fe;
+}
+
+.alert-danger {
+  border-left: 6px solid #dc3545;
+}
+
+.alert-success {
+  border-left: 6px solid #198754;
+}
+
+.spinner-border {
+  border-width: 0.25em;
+}
+
+#productsContainer .col,
+#productsList .col {
+  margin-bottom: 1.5rem;
+}
+
+#productForm .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+#productForm label {
+  font-weight: 500;
+  color: #084298;
+}
+
+#productDetail .card {
+  border: 2px solid #0d6efd22;
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 160px;
+  }
+  .navbar {
+    font-size: 1rem;
+  }
+}
+
+/* --- DARK MODE --- */
+body.dark-mode {
+  background-color: #181c22;
+  color: #e9ecef;
+}
+
+body.dark-mode .navbar {
+  background: linear-gradient(90deg, #0d6efd 60%, #181c22 100%);
+}
+
+body.dark-mode .card {
+  background: #23272f;
+  color: #e9ecef;
+  box-shadow: 0 2px 12px rgba(13, 110, 253, 0.1),
+    0 1.5px 6px rgba(33, 37, 41, 0.1);
+}
+
+body.dark-mode .card-title,
+body.dark-mode .card-subtitle {
+  color: #90c2ff;
+}
+
+body.dark-mode .card-img-top {
+  background: #23272f;
+}
+
+body.dark-mode .alert-info {
+  background: linear-gradient(90deg, #1a2332 60%, #23272f 100%);
+  color: #90c2ff;
+  border: 1px solid #0d6efd55;
+}
+
+body.dark-mode .alert-danger {
+  background: #2c1a1a;
+  color: #ffb3b3;
+  border-left: 6px solid #dc3545;
+}
+
+body.dark-mode .alert-success {
+  background: #1a2c1a;
+  color: #b3ffb3;
+  border-left: 6px solid #198754;
+}
+
+body.dark-mode .form-control {
+  background: #23272f;
+  color: #e9ecef;
+  border-color: #0d6efd55;
+}
+
+body.dark-mode #productForm label {
+  color: #90c2ff;
+}
+
+body.dark-mode .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #084298;
+  border-color: #084298;
+}
+
+body.dark-mode .btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #23272f;
+}
+
+body.dark-mode .btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+body.dark-mode .spinner-border {
+  border-color: #0d6efd #23272f #23272f #0d6efd;
+}
