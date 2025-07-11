@@ -4,6 +4,18 @@ Crea la parte front-end di uno shop online. In particolare sarai responsabile de
 L’obiettivo di oggi è connettere un’interfaccia statica alle API per poter ricevere prodotti, crearne di nuovi, modificarli una volta creati e cancellarli all’occorrenza.
 Questo è l’endpoint principale: https://striveschool-api.herokuapp.com/api/product/
 Questo è il modello di un prodotto:
+{
+  "name": "Nokia 3310",             // REQUIRED
+  "description": "Indestructible cellphone", // REQUIRED
+  "brand": "Nokia",               // REQUIRED
+  "imageUrl": "https://example.com/3310.jpg", // REQUIRED
+  "price": 99,                   // REQUIRED
+  "_id": "5d318e1a8541744830bef139",     // SERVER GENERATED
+  "userId": "6385f782597b9d001545386b",   // SERVER GENERATED
+  "createdAt": "2019-07-19T09:32:10.535Z", // SERVER GENERATED
+  "updatedAt": "2019-07-19T09:32:10.535Z", // SERVER GENERATED
+  "__v": 0                     // SERVER GENERATED
+}
 Per creare nuovi prodotti dovrai partire da questo modello come riferimento, e formarlo con alcune delle proprietà richieste per poi inviarlo come payload della chiamata POST.
 OGNI CHIAMATA DOVRÀ ESSERE AUTENTICATA! L’autenticazione di queste API è una “Token Based Authentication” per rendere privato l’accesso ai suoi contenuti. Senza essere autenticato non potrai ottenere i dati di cui hai bisogno.
 Questo è il mio token personale: 
