@@ -1,11 +1,3 @@
-/*
-  Stile personalizzato per lo shop online
-  - Palette: blu principale, grigio scuro, bianco
-  - Coerenza cromatica tra tutte le pagine
-  - Dark mode supportata
-  - Font moderno
-*/
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 body {
@@ -44,18 +36,13 @@ body {
   box-shadow: 0 2px 12px rgba(13, 110, 253, 0.07),
     0 1.5px 6px rgba(33, 37, 41, 0.04);
   border: none;
-  /* Rimosso effetto hover animato */
-}
-
-.card:hover {
-  /* Nessuna animazione/trasformazione */
 }
 
 .card-img-top {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  object-fit: cover;
-  height: 220px;
+  object-fit: contain; /* Mostra tutta l'immagine senza zoomarla */
+  height: 300px; /* Altezza aumentata per immagini delle cards */
   background: #e9ecef;
 }
 
@@ -135,7 +122,7 @@ body {
 
 @media (max-width: 576px) {
   .card-img-top {
-    height: 160px;
+    height: 190px; /* Altezza aumentata per immagini delle cards su mobile */
   }
   .navbar {
     font-size: 1rem;
