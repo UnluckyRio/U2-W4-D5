@@ -18,12 +18,6 @@ Questo è il modello di un prodotto:
 }
 Per creare nuovi prodotti dovrai partire da questo modello come riferimento, e formarlo con alcune delle proprietà richieste per poi inviarlo come payload della chiamata POST.
 OGNI CHIAMATA DOVRÀ ESSERE AUTENTICATA! L’autenticazione di queste API è una “Token Based Authentication” per rendere privato l’accesso ai suoi contenuti. Senza essere autenticato non potrai ottenere i dati di cui hai bisogno.
-Questo è il mio token personale: 
-fetch("https://striveschool-api.herokuapp.com/api/put-your-endpoint-here/", {
-headers: {
-"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODcwYzQ3MDc4Y2RkZjAwMTU1ZDY3YTUiLCJpYXQiOjE3NTIyMjA3ODQsImV4cCI6MTc1MzQzMDM4NH0.dO3Raq6bNGr8Ex-_K4TiBrd7oJQwovR3evxi1iXMrdM"
-}
-})
 Il token dovrà venire utilizzato come "authorization" header.
 Obiettivi generali:
 	•	Avere una pagina back-office, in cui si potranno inserire i prodotti specificando i parametri obbligatori e facoltativi, modificare o cancellare il prodotto.
