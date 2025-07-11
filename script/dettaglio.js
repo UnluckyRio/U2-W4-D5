@@ -135,5 +135,16 @@ async function loadProductDetail() {
   }
 }
 
+// Funzione generica per chiamate API autenticata
+async function apiFetch(url, options = {}) {
+  return fetch(url, {
+    ...options,
+    headers: {
+      Authorization: `Bearer ${AUTH_TOKEN}`,
+      ...(options.headers || {}),
+    },
+  });
+}
+
 // Avvio il caricamento dettagli al caricamento della pagina
 window.addEventListener("DOMContentLoaded", loadProductDetail);
